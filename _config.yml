@@ -1,1 +1,55 @@
-@@
+# Configuración básica
+title: Mi Portafolio de SysAdmin # Título de tu sitio web
+email: tuemail@ejemplo.com # Tu dirección de correo electrónico
+description: >- # Descripción de tu sitio web (permite múltiples líneas)
+  Este es mi portafolio personal donde muestro mis habilidades y proyectos como SysAdmin.
+baseurl: "" # Subruta de tu sitio web (si está alojado en una subcarpeta)
+url: "https://tuusuario.github.io" # URL base de tu sitio web
+
+# Configuración de Jekyll
+markdown: kramdown # Procesador de Markdown (kramdown, redcarpet, etc.)
+theme: minima # Tema de Jekyll (minima, jekyll-theme-cayman, etc.)
+plugins: # Lista de plugins de Jekyll
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Configuración personalizada
+author: # Información del autor
+  name: Tu Nombre
+  twitter_username: tunombretwitter # Tu nombre de usuario de Twitter
+  github_username: tunombregithub # Tu nombre de usuario de GitHub
+
+collections: # Colecciones de contenido (proyectos, publicaciones, etc.)
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Excluir archivos y carpetas del proceso de generación
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Configuración de paginación
+paginate: 5 # Número de publicaciones por página (si tienes un blog)
+paginate_path: "/blog/page:num/" # Ruta de paginación
+
+# Configuración de permalinks
+permalink: pretty # Estilo de permalink (pretty, date, none, etc.)
+
+# Configuración de plugins
+jekyll-feed: # Configuración del plugin jekyll-feed
+  path: feed.xml
+
+jekyll-seo-tag: # Configuración del plugin jekyll-seo-tag
+  title: Mi Portafolio de SysAdmin
+  description: Este es mi portafolio personal donde muestro mis habilidades y proyectos como SysAdmin.
+  canonical: "https://tuusuario.github.io"
+  image: "/assets/images/tu-imagen.jpg" # Ruta a tu imagen de portada
+
+# Configuración de variables personalizadas
+variable_personalizada: "Valor personalizado"
